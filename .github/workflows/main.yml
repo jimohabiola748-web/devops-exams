@@ -1,0 +1,19 @@
+name: examday
+
+on:
+  push:
+    branches: [ "main" ] # Or "master" if your repo uses master
+  workflow_dispatch: # This allows you to run it manually from the Actions tab
+
+jobs:
+  run-echo-commands:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Exam Script
+        run: |
+          echo "DevOps Exam Day"
+          echo "GitHub Actions is working successfully!"
